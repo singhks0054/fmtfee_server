@@ -6,11 +6,34 @@ const studentSchema = new mongoose.Schema({
     required: true,
     unique: true
   },
+  universityRollNo: {
+    type: Number,
+    required: true,
+    unique: true
+  },
+  universityEnrollNo: {
+    type: Number,
+    required: true,
+    unique: true
+  },
+  universityRegNo: {
+    type: Number,
+    required: true,
+    unique: true
+  },
+  scholarship: {
+    type: String,
+    required: true
+  },
   course: {
     type: String,
     required: true
   },
   session: {
+    type: String,
+    required: true
+  },
+  education: {
     type: String,
     required: true
   },
@@ -34,12 +57,26 @@ const studentSchema = new mongoose.Schema({
     required: true,
     trim: true
   },
+  fatherOccupation: {
+    type: String,
+    required: true,
+    trim: true
+  },
+  annualIncome: {
+    type: String,
+    required: true,
+    trim: true
+  },
   motherName: {
     type: String,
     required: true,
     trim: true
   },
-  address: {
+  addressLocal: {
+    type: String,
+    required: true
+  },
+  addressPermanent: {
     type: String,
     required: true
   },
@@ -55,7 +92,15 @@ const studentSchema = new mongoose.Schema({
     type: String,
     required: true
   },
-  phoneNumber: {
+  bloodGroup: {
+    type: String,
+    required: true
+  },
+  phoneNumber1: {
+    type: String,
+    required: true
+  },
+  phoneNumber2: {
     type: String,
     required: true
   }
@@ -70,3 +115,4 @@ studentSchema.virtual('Fee', {
 const Student = mongoose.model('Student', studentSchema)
 
 export default Student
+
